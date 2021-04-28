@@ -17,10 +17,11 @@ jQuery(function ($) {
        Nav Scroll
        ====================================== */
 
-    $(".scroll").on("click", function(event){
+    $(".scroll").on("click", function (event) {
         event.preventDefault();
         $('html,body').animate({
-            scrollTop: $(this.hash).offset().top - 40}, 1100);
+            scrollTop: $(this.hash).offset().top - 40
+        }, 1100);
     });
     /* ====================================
        Nav Fixed On Scroll
@@ -29,8 +30,7 @@ jQuery(function ($) {
     $(window).on('scroll', function () {
         if ($(this).scrollTop() >= 80) { // Set position from top to add class
             $('header').addClass('header-appear');
-        }
-        else {
+        } else {
             $('header').removeClass('header-appear');
         }
     });
@@ -85,16 +85,34 @@ jQuery(function ($) {
 
         if ($("#animated-cursor").length) {
 
-            var e = {x: 0, y: 0}, t = {x: 0, y: 0}, n = .25, o = !1, a =    document.getElementById("cursor"),
+            var e = {
+                    x: 0,
+                    y: 0
+                },
+                t = {
+                    x: 0,
+                    y: 0
+                },
+                n = .25,
+                o = !1,
+                a = document.getElementById("cursor"),
                 i = document.getElementById("cursor-loader");
-            TweenLite.set(a, {xPercent: -50, yPercent: -50}), document.addEventListener("mousemove", function (t) {
-                var n = window.pageYOffset || document.documentElement.scrollTop;
-                e.x = t.pageX, e.y = t.pageY - n
-            }), TweenLite.ticker.addEventListener("tick", function () {
-                o || (t.x += (e.x - t.x) * n, t.y += (e.y - t.y) * n, TweenLite.set(a, {x: t.x, y: t.y}))
-            }),
+            TweenLite.set(a, {
+                    xPercent: -50,
+                    yPercent: -50
+                }), document.addEventListener("mousemove", function (t) {
+                    var n = window.pageYOffset || document.documentElement.scrollTop;
+                    e.x = t.pageX, e.y = t.pageY - n
+                }), TweenLite.ticker.addEventListener("tick", function () {
+                    o || (t.x += (e.x - t.x) * n, t.y += (e.y - t.y) * n, TweenLite.set(a, {
+                        x: t.x,
+                        y: t.y
+                    }))
+                }),
                 $(".animated-wrap").mouseenter(function (e) {
-                    TweenMax.to(this, .3, {scale: 2}), TweenMax.to(a, .3, {
+                    TweenMax.to(this, .3, {
+                        scale: 2
+                    }), TweenMax.to(a, .3, {
                         scale: 2,
                         borderWidth: "1px",
                         opacity: .2
@@ -103,10 +121,14 @@ jQuery(function ($) {
                         borderWidth: "1px",
                         top: 1,
                         left: 1
-                    }), TweenMax.to($(this).children(), .3, {scale: .5}), o = !0
+                    }), TweenMax.to($(this).children(), .3, {
+                        scale: .5
+                    }), o = !0
                 }),
                 $(".animated-wrap").mouseleave(function (e) {
-                    TweenMax.to(this, .3, {scale: 1}), TweenMax.to(a, .3, {
+                    TweenMax.to(this, .3, {
+                        scale: 1
+                    }), TweenMax.to(a, .3, {
                         scale: 1,
                         borderWidth: "2px",
                         opacity: 1
@@ -115,11 +137,17 @@ jQuery(function ($) {
                         borderWidth: "2px",
                         top: 0,
                         left: 0
-                    }), TweenMax.to($(this).children(), .3, {scale: 1, x: 0, y: 0}), o = !1
+                    }), TweenMax.to($(this).children(), .3, {
+                        scale: 1,
+                        x: 0,
+                        y: 0
+                    }), o = !1
                 }),
 
                 $(".testimonial-images .animated-wrap").mouseenter(function (e) {
-                    TweenMax.to(this, .3, {scale: 2}), TweenMax.to(a, .3, {
+                    TweenMax.to(this, .3, {
+                        scale: 2
+                    }), TweenMax.to(a, .3, {
                         scale: 2,
                         borderWidth: "1px",
                         opacity: .2
@@ -128,7 +156,9 @@ jQuery(function ($) {
                         borderWidth: "1px",
                         top: 1,
                         left: 1
-                    }), TweenMax.to($(this).children(), .3, {scale: .5}), o = !0
+                    }), TweenMax.to($(this).children(), .3, {
+                        scale: .5
+                    }), o = !0
                 }),
 
                 $(".animated-wrap").mousemove(function (e) {
@@ -143,24 +173,32 @@ jQuery(function ($) {
                     })
                 }),
                 $(".hide-cursor,.btn,.tp-bullets").mouseenter(function (e) {
-                    TweenMax.to("#cursor", .2, {borderWidth: "1px", scale: 2, opacity: 0})
+                    TweenMax.to("#cursor", .2, {
+                        borderWidth: "1px",
+                        scale: 2,
+                        opacity: 0
+                    })
                 }), $(".hide-cursor,.btn,.tp-bullets").mouseleave(function (e) {
-                TweenMax.to("#cursor", .3, {borderWidth: "2px", scale: 1, opacity: 1})
-            }),$(".link").mouseenter(function (e) {
-                TweenMax.to("#cursor", .2, {
-                    borderWidth: "0px",
-                    scale: 3,
-                    backgroundColor: "rgba(255,255,255,0.47)",
-                    opacity: .15
+                    TweenMax.to("#cursor", .3, {
+                        borderWidth: "2px",
+                        scale: 1,
+                        opacity: 1
+                    })
+                }), $(".link").mouseenter(function (e) {
+                    TweenMax.to("#cursor", .2, {
+                        borderWidth: "0px",
+                        scale: 3,
+                        backgroundColor: "rgba(255,255,255,0.47)",
+                        opacity: .15
+                    })
+                }), $(".link").mouseleave(function (e) {
+                    TweenMax.to("#cursor", .3, {
+                        borderWidth: "2px",
+                        scale: 1,
+                        backgroundColor: "rgba(255, 255, 255, 0)",
+                        opacity: 1
+                    })
                 })
-            }), $(".link").mouseleave(function (e) {
-                TweenMax.to("#cursor", .3, {
-                    borderWidth: "2px",
-                    scale: 1,
-                    backgroundColor: "rgba(255, 255, 255, 0)",
-                    opacity: 1
-                })
-            })
 
         }
 
@@ -177,7 +215,7 @@ jQuery(function ($) {
 
     $(".stats").each(function () {
         $('.numscroller').appear(function () {
-            $(this).prop('Counter',0).animate({
+            $(this).prop('Counter', 0).animate({
                 Counter: $(this).text()
             }, {
                 duration: 5000,
@@ -211,7 +249,7 @@ jQuery(function ($) {
         $('#js-grid-mosaic-flat').cubeportfolio({
             filters: '#js-filters-mosaic-flat',
             layoutMode: 'mosaic',
-            defaultFilter: '*',
+            defaultFilter: '.graphic-designs',
             animationType: 'scaleSides',
             gapHorizontal: -1,
             gapVertical: -1,
@@ -223,7 +261,7 @@ jQuery(function ($) {
             mediaQueries: [{
                 width: 1500,
                 cols: 4
-            },{
+            }, {
                 width: 1100,
                 cols: 4
             }, {
@@ -287,7 +325,7 @@ jQuery(function ($) {
             mediaQueries: [{
                 width: 1500,
                 cols: 2
-            },{
+            }, {
                 width: 1100,
                 cols: 2
             }, {
@@ -357,7 +395,7 @@ jQuery(function ($) {
 
     /* Testimonial */
     $('.testimonial-two').owlCarousel({
-        items:1,
+        items: 1,
         loop: true,
         smartSpeed: 500,
         responsiveClass: true,
@@ -391,10 +429,10 @@ jQuery(function ($) {
         nav: false,
         loop: true,
         autoplay: true,
-        smartSpeed:500,
+        smartSpeed: 500,
         navSpeed: true,
-        autoplayHoverPause:true,
-        responsiveClass:true
+        autoplayHoverPause: true,
+        responsiveClass: true
     });
 
     /* ===================================
@@ -403,99 +441,97 @@ jQuery(function ($) {
 
     /*Design Studio*/
     $("#rev_slider_8_1").show().revolution({
-        sliderType:"standard",
-        jsFileLocation:"//localhost/revslider/revslider/public/assets/js/",
-        sliderLayout:"fullscreen",
-        dottedOverlay:"none",
-        delay:9000,
+        sliderType: "standard",
+        jsFileLocation: "//localhost/revslider/revslider/public/assets/js/",
+        sliderLayout: "fullscreen",
+        dottedOverlay: "none",
+        delay: 9000,
         navigation: {
-            keyboardNavigation:"off",
+            keyboardNavigation: "off",
             keyboard_direction: "horizontal",
-            mouseScrollNavigation:"off",
-            mouseScrollReverse:"default",
-            onHoverStop:"on",
-            touch:{
-                touchenabled:"on",
-                touchOnDesktop:"off",
+            mouseScrollNavigation: "off",
+            mouseScrollReverse: "default",
+            onHoverStop: "on",
+            touch: {
+                touchenabled: "on",
+                touchOnDesktop: "off",
                 swipe_threshold: 75,
                 swipe_min_touches: 50,
                 swipe_direction: "horizontal",
                 drag_block_vertical: false
-            }
-            ,
+            },
             arrows: {
-                style:"uranus",
-                enable:false,
-                hide_onmobile:true,
-                hide_under:600,
-                hide_onleave:true,
-                hide_delay:200,
-                hide_delay_mobile:1200,
-                tmp:'<div class="hvr-pulse"></div>',
+                style: "uranus",
+                enable: false,
+                hide_onmobile: true,
+                hide_under: 600,
+                hide_onleave: true,
+                hide_delay: 200,
+                hide_delay_mobile: 1200,
+                tmp: '<div class="hvr-pulse"></div>',
                 left: {
-                    h_align:"left",
-                    v_align:"center",
-                    h_offset:30,
-                    v_offset:0
+                    h_align: "left",
+                    v_align: "center",
+                    h_offset: 30,
+                    v_offset: 0
                 },
                 right: {
-                    h_align:"right",
-                    v_align:"center",
-                    h_offset:30,
-                    v_offset:0
+                    h_align: "right",
+                    v_align: "center",
+                    h_offset: 30,
+                    v_offset: 0
                 }
-            }
-            ,
+            },
             bullets: {
-                enable:false,
-                hide_onmobile:true,
-                hide_under:600,
-                style:"hephaistos",
-                hide_onleave:true,
-                hide_delay:200,
-                hide_delay_mobile:1200,
-                direction:"horizontal",
-                h_align:"center",
-                v_align:"bottom",
-                h_offset:0,
-                v_offset:30,
-                space:5,
-                tmp:''
+                enable: false,
+                hide_onmobile: true,
+                hide_under: 600,
+                style: "hephaistos",
+                hide_onleave: true,
+                hide_delay: 200,
+                hide_delay_mobile: 1200,
+                direction: "horizontal",
+                h_align: "center",
+                v_align: "bottom",
+                h_offset: 0,
+                v_offset: 30,
+                space: 5,
+                tmp: ''
             }
         },
-        responsiveLevels:[1240,1024,778,480],
-        visibilityLevels:[1240,1024,778,480],
-        gridwidth:[1240,1024,778,480],
-        gridheight:[868,600,500,400],
-        lazyType:"smart",
+        responsiveLevels: [1240, 1024, 778, 480],
+        visibilityLevels: [1240, 1024, 778, 480],
+        gridwidth: [1240, 1024, 778, 480],
+        gridheight: [868, 600, 500, 400],
+        lazyType: "smart",
         parallax: {
-            type:"mouse",
-            origo:"slidercenter",
-            speed:2000,
-            speedbg:0,
-            speedls:0,
-            levels:[2,3,4,5,6,7,12,16,10,50,10,11,12,13,14,55],
+            type: "mouse",
+            origo: "slidercenter",
+            speed: 2000,
+            speedbg: 0,
+            speedls: 0,
+            levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50, 10, 11, 12, 13, 14, 55],
         },
-        shadow:0,
-        spinner:"off",
-        stopLoop:"off",
-        stopAfterLoops:-1,
-        stopAtSlide:-1,
-        shuffle:"off",
-        autoHeight:"off",
-        fullScreenAutoWidth:"off",
-        fullScreenAlignForce:"off",
+        shadow: 0,
+        spinner: "off",
+        stopLoop: "off",
+        stopAfterLoops: -1,
+        stopAtSlide: -1,
+        shuffle: "off",
+        autoHeight: "off",
+        fullScreenAutoWidth: "off",
+        fullScreenAlignForce: "off",
         fullScreenOffsetContainer: "",
         fullScreenOffset: "",
-        hideThumbsOnMobile:"off",
-        hideSliderAtLimit:0,
-        hideCaptionAtLimit:0,
-        hideAllCaptionAtLilmit:0,
-        debugMode:false,
+        hideThumbsOnMobile: "off",
+        hideSliderAtLimit: 0,
+        hideCaptionAtLimit: 0,
+        hideAllCaptionAtLilmit: 0,
+        debugMode: false,
         fallbacks: {
-            simplifyAll:"off",
-            nextSlideOnWindowFocus:"off",
-            disableFocusListener:false,
+            simplifyAll: "off",
+            nextSlideOnWindowFocus: "off",
+            disableFocusListener: false,
         }
     });
 });

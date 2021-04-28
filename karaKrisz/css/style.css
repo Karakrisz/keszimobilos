@@ -1,0 +1,28 @@
+/******************** header start **********************/
+
+.nav.navbar-nav.mx-auto {
+    width: 770px;
+    position: relative;
+    left: 70px;
+}
+
+.tp-caption__img.link {
+    position: relative;
+    bottom: 80px;
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: cover;
+}
+
+.logo-default {
+    width: 100%;
+    width: 70px;
+    height: 60px;
+    object-fit: cover;
+}
+
+/******************** pricing start **********************/
+
+.price_title__h4.m-0 {
+    margin-top: 30px !important;
+}
