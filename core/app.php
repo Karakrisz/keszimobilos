@@ -6,6 +6,13 @@ $cleaned = explode("?", $uri)[0];
 
 route('/', 'homeController');
 
+route('/shop', 'shopController');
+route('/shop/(?<shop>[\w]+)', 'shopParamsController'); // write in url
+
+route('/shop/session/fot', 'shopSessionController', "POST");
+route('/shop/session/dunakeszi', 'shopSessionController', "POST");
+route('/shop/session/igbdunakeszi', 'shopSessionController', "POST");
+
 list($view, $data) = dispatch($cleaned, 'notFoundController');
 if (preg_match("%^redirect\:%", $view)) {
     $redirectTarget = substr($view, 9);

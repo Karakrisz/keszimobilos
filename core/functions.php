@@ -53,3 +53,5 @@ function getConnection()
     }
     return $connection;
 }
+
+

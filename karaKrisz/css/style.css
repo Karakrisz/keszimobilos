@@ -1,3 +1,42 @@
+img {
+    object-fit: cover;
+}
+
+/******************** Flash class and keyframe animation **********************/
+
+.flashit {
+    -webkit-animation: flash linear 1s infinite;
+    animation: flash linear 2s infinite;
+}
+
+@-webkit-keyframes flash {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 /******************** header start **********************/
 
 .nav.navbar-nav.mx-auto {
@@ -11,18 +50,143 @@
     bottom: 80px;
     width: 150px !important;
     height: 150px !important;
-    object-fit: cover;
+}
+
+.tp-caption__img--width-formating.link {
+    width: 220px !important;
 }
 
 .logo-default {
     width: 100%;
     width: 70px;
     height: 60px;
+}
+
+.logo-default--formating {
+    height: 150px !important;
+    margin-bottom: 10px;
+}
+
+.slider {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    height: 400px;
+}
+
+.slider .item img {
     object-fit: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.slider .previous,
+.slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 10px 15px;
+    background: #f50206;
+    color: white !important;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    z-index: 100;
+}
+
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.slider .previous:hover,
+.slider .next:hover {
+    background: white;
+    color: #f50206 !important;
+}
+
+.slider .item {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 /******************** pricing start **********************/
 
 .price_title__h4.m-0 {
     margin-top: 30px !important;
+}
+
+/******************** shop start **********************/
+
+.main-title h2 {
+    font-size: 35px;
+}
+
+.text-content__btn {
+    color: white;
+    margin-top: 15px;
+    position: relative;
+    border: 0;
+    background: #3a0e81;
+    font-size: 20px;
+}
+
+/******************** blog start **********************/
+
+.split-container-setting.style-three {
+    padding: 50px 0;
+}
+
+a.previous {
+    left: 0;
+}
+
+/******************** contact start **********************/
+
+.contact__p {
+    font-size: 20px;
+    margin: 25px 0;
+}
+
+.contact__p__link {
+    color: #f50206;
+    font-weight: bold;
+    position: relative;
+    top: 2px;
+}
+
+.contact__p__link:hover {
+    color: #f50206;
+}
+
+
+/******************** mobile view start **********************/
+
+@media screen and (max-width: 767px) {
+
+    .logo-default--formating {
+        height: 60px !important;
+        margin-bottom: 10px;
+        width: 120px;
+    }
+
+    .about-img-small {
+        margin-left: 30px;
+        top: -185px;
+        margin-bottom: -153px;
+    }
+
 }

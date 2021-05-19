@@ -15,7 +15,7 @@
                             </a> </li>
                         <li><a href="javascript:void(0)" class="wow fadeInDown pinterest"><i class="fab fa-pinterest-p"></i> </a> </li>
                     </ul>
-                    <p class="copyrights mt-2 mb-2">© 2020 MegaOne. Made with love by <a href="javascript:void(0)">themesindustry</a></p>
+                    <p class="copyrights mt-2 mb-2">© 2020 karaKrisz. Minden jog fenttarva</a></p>
                 </div>
             </div>
         </div>
@@ -69,3 +69,4 @@
 
     <!-- custom script -->
     <script src="ad-agency/js/script.js"></script>
+    <script src="karaKrisz/js/app.js"></script>
