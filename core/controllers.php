@@ -76,6 +76,22 @@ function shopSessionController()
     ];
 }
 
+function serviceRequestSessionController()
+{
+    return [
+        "service-request",
+        [
+            "title" => "Szerviz igénylés"
+        ]
+    ];
+}
+
+function emailSubmitController()
+{
+    return [
+        "redirect:/service-request", []
+    ];
+}
 
 function notFoundController()
 {

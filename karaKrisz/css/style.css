@@ -2,6 +2,25 @@ img {
     object-fit: cover;
 }
 
+.btn-setting {
+    text-transform: none !important;
+}
+
+.btn-setting--f-size {
+    font-size: 20px;
+}
+
+.alert.alert-success.form-div__email-confirmation-text-box__alert-box {
+    position: relative;
+    top: 50px;
+    background: #3a0e81;
+    border: 0;
+}
+
+.form-div__email-confirmation-text-box {
+    display: none;
+}
+
 /******************** Flash class and keyframe animation **********************/
 
 .flashit {
@@ -38,6 +57,10 @@ img {
 }
 
 /******************** header start **********************/
+
+.bottom-nav {
+    border: 0 !important;
+}
 
 .nav.navbar-nav.mx-auto {
     width: 770px;
@@ -144,6 +167,40 @@ img {
     font-size: 20px;
 }
 
+/******************** service request start **********************/
+
+.service-request-section {
+    padding: 80px 0 0 0;
+    color: white;
+    font-family: initial;
+    margin-bottom: 20px;
+}
+
+.mb-4.contact-wrap__h3 {
+    font-size: 35px;
+}
+
+.service-request-section-container-row-img-box__img {
+    position: relative;
+    top: 190px;
+}
+
+.contactForm__link {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    background: #f50206;
+    color: white;
+    padding: 7px;
+    font-weight: bold;
+}
+
+.contactForm__link:hover {
+    background-color: white;
+    color: #f50206;
+    border: 1px solid #f50206;
+}
+
 /******************** blog start **********************/
 
 .split-container-setting.style-three {
@@ -189,4 +246,17 @@ a.previous {
         margin-bottom: -153px;
     }
 
+    .service-request-section-container-row-img-box__img {
+        top: 0;
+    }
+
+    .contactForm__link {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    .alert.alert-success.form-div__email-confirmation-text-box__alert-box {
+        top: 0;
+    }
 }

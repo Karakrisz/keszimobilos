@@ -5,6 +5,9 @@ $uri = $_SERVER["REQUEST_URI"];
 $cleaned = explode("?", $uri)[0];
 
 route('/', 'homeController');
+route('/service-request', 'serviceRequestSessionController');
+route('/service-request', 'emailSubmitController', "POST");
+
 
 route('/shop', 'shopController');
 route('/shop/(?<shop>[\w]+)', 'shopParamsController'); // write in url

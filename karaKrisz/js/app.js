@@ -1,7 +1,7 @@
 /******************** shop start **********************/
 
-if (window.location.href.search('shop') == 33 || window.location.href.search('shop') == 27) {
-    //elementHide();
+if (window.location.href.search('service-request') == 33 || window.location.href.search('service-request') == 28) {
+    elementHide();
 }
 
 function elementHide() {
@@ -18,7 +18,6 @@ function elementHide() {
     }
 
 }
-
 
 let slideIndex = 1;
 showSlides(slideIndex);

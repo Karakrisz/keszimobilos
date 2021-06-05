@@ -1200,17 +1200,25 @@
                             bátran Facebook oldalunkra, az iGsm Box Dunakeszi címen és írj üzenetet. Vagy telefonon
                             is érdeklődhetsz! Köszönjük, hogy meglátogattad oldalunkat!</p>
 
-                        <?php if ($_SESSION["shop"] == "fot") : ?>
+                        <a target="_blank" href="/service-request" class="btn-setting btn-setting--f-size color-black btn-hvr-up btn-blue btn-hvr-pink">Szerviz igénylőlap</a>
+
+                        <!-- <?php // if ($_SESSION["shop"] == "fot") : 
+                                ?>
                             <a href="tel:+36706315068" class="btn-setting color-black btn-hvr-up btn-blue btn-hvr-pink">hívás most</a>
-                        <?php endif ?>
+                        <?php // endif 
+                        ?>
 
-                        <?php if ($_SESSION["shop"] == "dunakeszi") : ?>
+                        <?php // if ($_SESSION["shop"] == "dunakeszi") : 
+                        ?>
                             <a href="tel:+36706314672" class="btn-setting color-black btn-hvr-up btn-blue btn-hvr-pink">hívás most</a>
-                        <?php endif ?>
+                        <?php // endif 
+                        ?>
 
-                        <?php if ($_SESSION["shop"] == "igbdunakeszi") : ?>
+                        <?php // if ($_SESSION["shop"] == "igbdunakeszi") : 
+                        ?>
                             <a href="tel:+36708842082" class="btn-setting color-black btn-hvr-up btn-blue btn-hvr-pink">hívás most</a>
-                        <?php endif ?>
+                        <?php // endif 
+                        ?> -->
 
                     </div>
                 </div>
